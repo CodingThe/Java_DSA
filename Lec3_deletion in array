@@ -1,0 +1,44 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+class Main
+{ 
+
+    public static int dele(int arr[], int n,int r){
+        int i=0;
+        for(;i<n;i++){
+            if(arr[i]==r){
+                break;
+            }
+        }
+        if(i==n){
+            return n;
+        }
+        for(int j=i;j<n-1;j++){
+            arr[j]=arr[j+1];
+        }
+        return n-1;
+    }
+
+    public static void main(String args[]) 
+    { 
+       int arr[] = {5,6,8,9,10};
+       int n=5;
+
+       for(int i=0; i < n; i++)
+       {
+       		System.out.print(arr[i]+" ");
+       }
+
+       System.out.println();
+
+       int r=10;
+       n=dele(arr,n,r);
+        System.out.println("After deletion");
+
+       for(int i=0; i < n; i++)
+       {
+       		System.out.print(arr[i]+" ");
+       }
+    } 
+}
