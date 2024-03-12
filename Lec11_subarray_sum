@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int arr[]={1,4,13,-3,-10,5};
+        HashSet<Integer>hs=new HashSet<>();
+        int sum=arr[0];
+        hs.add(arr[0]);
+        boolean flag=false;
+        if(arr[0]==0){
+            System.out.println("The subarray is present");
+            flag=true;
+            }
+        else{
+            for(int i=1;i<arr.length;i++){
+                sum+=arr[i];
+                if(hs.contains(0)||hs.contains(sum)){
+                 System.out.println("The subarray is present");
+                 flag=true;
+                    break;
+                }
+                else{
+                    hs.add(sum);
+                }
+            }
+        }
+        if(!flag)
+            System.out.println("The subarray does not contains");
+        }
+}
