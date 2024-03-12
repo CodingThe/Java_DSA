@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int arr[]={10,20,10,20,30};
+        int x=countDist(arr);
+        System.out.println(x);
+        }
+    
+    public static int countDist(int arr[]){
+        // int res=0;
+        // for(int i=0;i<arr.length;i++){
+        //     boolean flag=false;
+        //     for(int j=0;j<i;j++){
+        //         if(arr[i]==arr[j]){
+        //             flag=true;
+        //             break;
+        //         }
+        //     }
+        //     if(flag==false){
+        //         res++;
+        //     }
+        // }
+        // return res;
+        HashSet<Integer>hs=new HashSet<>();
+        for(int i=0;i<arr.length;i++){
+            hs.add(arr[i]);
+        }
+        return hs.size();
+    }   
+}
