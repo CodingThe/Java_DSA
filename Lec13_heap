@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		PriorityQueue<Integer>pq=new PriorityQueue<Integer>(Collections.reverseOrder());
+		pq.add(100);
+		pq.add(200);
+		pq.add(300);
+		pq.add(400);
+		pq.add(500);
+		System.out.println(pq.peek());
+		pq.poll();
+		System.out.println(pq.peek());
+	}
+}
