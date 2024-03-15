@@ -1,0 +1,39 @@
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    String str="geeksforgeeks";
+    System.out.println(str.length());
+    System.out.println(str.charAt(3));
+    System.out.println(str.substring(2));
+    System.out.println(str.substring(2,4));
+    // String s1="geeksforgeeks";
+    // String s2="geeks";
+    // System.out.println(s1.contains(s2));
+    
+    String s1="geeksforgeeks";
+    String s2="geeksforgeeks";
+    System.out.println(s1.equals(s2));
+    
+    //we can use compareTo for lexicographically check give positive for bigger negative for lessor
+    int pr=s1.compareTo(s2);
+    if(pr>0)
+        System.out.println("s1 greater");
+    if(pr<0)
+        System.out.println("s2 greater");
+    else
+        System.out.println("equal");
+    
+    //index of 
+    System.out.println(s1.indexOf(s2));
+    //System.out.println(s1.indexOf(s2,1)); search from first indexOf
+    
+    String rs=s1;
+    s1=s1+"greek";   //strings are immutable but while concatinating it create new obecject
+    s1.charAt(2)='s';
+    System.out.println(s1);
+    System.out.println(s1==rs);
+    
+}
+}
